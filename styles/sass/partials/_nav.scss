@@ -1,0 +1,44 @@
+/* _nav.scss */
+
+.navBar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	border-bottom: 1px solid rgba($color: $primary, $alpha: 0.08);
+	background-color: $solidWhite;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+	.searchCart {
+		display: flex;
+	
+		.searchIcon,
+		.bag {
+			margin-right: 15px;
+		}
+	}
+	
+	a {
+		display: flex;
+	}
+	
+	.logo {
+		margin-left: 60px;
+	}
+	
+	.counter {
+		display: flex;
+		align-items: center;
+	
+		p {
+			width: 24px;
+			height: 24px;
+			background-color: $primary;
+			color: $solidWhite;
+			text-align: center;
+			border-radius: 50%;
+		}
+	}
+}
