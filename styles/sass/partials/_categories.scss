@@ -1,0 +1,39 @@
+.categoryGallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+	width: 100%;
+
+	.items {
+		padding: 45px;
+		margin: 50px 25px 25px;
+		border-radius: 10%;
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			width: 100%;
+			border-radius: 10%;
+			margin: 0 auto 20px auto;
+		}
+	}
+
+	.itemOne {
+		background-color: $quinary;
+	}
+	
+	.itemTwo {
+		background-color: $secondary;
+	}
+	
+	.itemThree {
+		background-color: $tertiary;
+	}
+	
+	.itemFour {
+		background-color: $quaternary
+	}
+}
