@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARTER - Toybox Homepage</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+
     <a href="#mainContent" class="skip-link">Skip to main content.</a>
 
     <nav class="navBar">
         <div class="wrapper">
+
             <button class="menuIcon">
-                <img src="./assets/menu-button.svg"alt="open slide-out navigation" class="menuIcon"/>
+                <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
             </button>
 
+            <!-- Homepage will not be linked to avoid needless page refresh -->
             <a href="#" class="logo">
                 <h1>Toybox</h1>
             </a>
 
             <div class="searchCart">
                 <button class="menuIcon">
-                    <img src="./assets/search.svg" alt="search icon" class="searchIcon"/>
+                    <img src="./assets/search.svg" alt="search icon" class="searchIcon">
                 </button>
-            
+
                 <a href="#" class="bag">
-                    <img src="./assets/shop-bag.svg" alt="shopping bag icon" class="bagIcon"/>
+                    <img src="./assets/shop-bag.svg" alt="shopping bag icon" class="bagIcon">
                 </a>
-            
+
                 <div class="counter">
                     <p class="smallCopy">0</p>
-                </div>  <!-- .counter END -->
+                </div> <!-- .counter END -->
             </div> <!-- .searchCart END -->
+
         </div> <!-- .wrapper END -->
     </nav> <!-- .navBar END -->
-
+    
     <header>
         <div class="headerImgContainer wrapper">
             <img src="./assets/header-image.jpg" alt="A child in overalls playing with colourful wooden blocks on the floor">
         </div>
+
         <div class="headerContent wrapper">
             <div class="contentContainer">
                 <h5>Handcrafted for kids</h5>
                 <h3>Go on, let them play with wooden blocks.</h3>
-                <p>Sed gravida eu ac aliquam pellentesque pharetra pharetra. Augue nam facilisis tristique turpis iaculis pulvinar tellus.</p>
-                <a class="button">Shop All</a>
+                <p>Sed gravida eu ac aliquam pellentesque pharetra pharetra. Augue nam facilisis tristique turpis iaculis pulvinar
+                    tellus.</p>
+                <a href="./shop.html" class="button">Shop All</a>
             </div>
         </div>
     </header>
+
     <main id="mainContent">
         <section class="categories" id="categories">
             <div class="wrapper">
@@ -86,7 +93,7 @@
                 </ul> <!-- .categoryGallery END-->
             </div> <!-- .wrapper END-->
         </section> <!-- .categories END-->
-</main>
+    </main>
 
     <footer id="footer">
         <div class="wrapper">
@@ -98,6 +105,7 @@
                     <nav>
                         <ul class="footerShop">
                             <li>
+                                <!-- discuss with designer whether nav menu headings should be links -->
                                 <h5>Shop</h5>
                             </li>
                             <li>
@@ -152,7 +160,6 @@
             </div> <!-- .footerFlexContainer END-->
         </div> <!-- .wrapper END-->
     </footer>
-    
 
 </body>
 </html>
