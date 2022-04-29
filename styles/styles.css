@@ -409,6 +409,9 @@ button.menuIcon:focus {
   background-color: transparent;
 }
 
+a {
+  display: inline-block;
+}
 a.button {
   color: #084b6d;
   background-color: transparent;
@@ -428,6 +431,11 @@ a.button:hover {
 a.button:focus {
   background-color: #084b6d;
   color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* _nav.scss */
@@ -507,6 +515,41 @@ header .headerContent {
 header .headerContent .contentContainer {
   margin: 0 auto;
   width: 65%;
+}
+
+.productsMainContent section {
+  padding: 75px;
+}
+.productsMainContent h2 {
+  text-align: center;
+}
+.productsMainContent .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.productsMainContent .products li {
+  -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+      flex-basis: calc(33.3333333333% - 30px);
+  margin: 5px 15px;
+  text-align: center;
+}
+.productsMainContent .products img {
+  border-radius: 10px;
+}
+.productsMainContent .popularProduct {
+  font-weight: bold;
+}
+.productsMainContent .discountedPrice {
+  text-decoration: line-through;
+  color: rgba(8, 75, 109, 0.5);
+}
+.productsMainContent .discountedPrice span {
+  display: inline-block;
+  text-decoration: none;
+  color: #084b6d;
 }
 
 .categoryGallery {
@@ -596,4 +639,100 @@ footer .footerNav nav a:hover {
 }
 footer .footerNav nav a:focus {
   color: white;
+}
+
+.mapForm .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.mapForm .wrapper .mapContainer {
+  width: 50%;
+}
+.mapForm .wrapper iframe {
+  width: 100%;
+}
+.mapForm .wrapper .formContainer {
+  width: calc(50% - 70px);
+  margin-left: 70px;
+}
+.mapForm .wrapper .formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mapForm .wrapper .formContainer form input, .mapForm .wrapper .formContainer form textarea {
+  padding: 0 0 10px 5px;
+  border: none;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Jakarta Sans";
+  border-bottom: 1px solid #eee;
+}
+.mapForm .wrapper .formContainer form input::-webkit-input-placeholder, .mapForm .wrapper .formContainer form textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::-moz-placeholder, .mapForm .wrapper .formContainer form textarea::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input:-ms-input-placeholder, .mapForm .wrapper .formContainer form textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::-ms-input-placeholder, .mapForm .wrapper .formContainer form textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input::placeholder, .mapForm .wrapper .formContainer form textarea::placeholder {
+  font-size: 0.8rem;
+  color: #084b6d;
+  opacity: 1;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+.mapForm .wrapper .formContainer form input textarea, .mapForm .wrapper .formContainer form textarea textarea {
+  min-height: 130px;
+  border: 1px solid #eee;
+  border-top: none;
+}
+.mapForm .wrapper .formContainer form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  color: #084b6d;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+  margin-bottom: 40px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  background-color: #fff;
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 20px;
 }
