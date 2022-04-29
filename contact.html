@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page - Toybox</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <a href="#contactsMainContent" class="skip-link">Skip to main content.</a>
+
+    <nav class="navBar">
+        <div class="wrapper">
+
+            <button class="menuIcon">
+                <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
+            </button>
+            
+            <a href="./index.html" class="logo">
+                <h1>Toybox <span class="sr-only"> Shop Page</span></h1>
+            </a>
+
+            <div class="searchCart">
+            <button class="menuIcon">
+                <img src="./assets/search.svg" alt="search icon" class="searchIcon">
+            </button>
+            
+            <a href="#" class="bag">
+                <img src="./assets/shop-bag.svg" alt="shopping bag icon" class="bagIcon">
+            </a>
+
+            <div class="counter">
+                <p class="smallCopy">0</p>
+            </div> <!-- .counter END -->
+        </div> <!-- .searchCart END -->
+        </div> <!-- .wrapper END -->
+    </nav> <!-- .navBar END -->
+    
+<!--  The following emmet produces the code below. Build all other html emmets like this...  
+        main#productsMainContent>div.wrapper>ul.products>li*11>a>img[src=./assets/]+h3+p.price -->
+
+    <main id="contactMainContent" class="contactMainContent">
+        <section class="mapForm">
+            <div class="wrapper">
+                <div class="mapContainer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.9953840239045!2d-79.40004738451314!3d43.64826437912155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34dc87fa67bd%3A0xe172d8fcbe1c5997!2sJuno%20College%20of%20Technology%20(formerly%20HackerYou)!5e0!3m2!1sen!2sca!4v1651180951566!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            <div class="formContainer">
+                <form action="#" method="POST" class="contactForm" name="contactForm">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" placeholder="Name">
+
+                    <label for="surname" class="sr-only">Surname</label>
+                    <input type="text" id="surname" placeholder="Surname">
+
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+
+                    <label for="phone" class="sr-only">Phone</label>
+                    <input type="tel" id="phone" placeholder="Phone">
+
+                    <select name="reason" id="reason">
+                        <option value="initial" disabled selected>Reason for contacting</option>
+                        <option value="refund">Refund request</option>
+                        <option value="status">Order status update</option>
+                        <option value="praise">Praise!</option>
+                        <option value="complaint">General concerns</option>
+                    </select>
+
+                    <label for="message" class="sr-only">Message for me</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message for me"></textarea>
+
+                    <button>Send Message</button>
+                </form>
+            </div>
+
+            </div>
+        </section>
+        
+    
+    </main>
+
+
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="footerFlexContainer">
+                <a href="./index.html" class="logo">
+                    <h4>Toybox</h4>
+                </a>
+            <div class="footerNav">
+                <nav>
+                    <ul class="footerShop">
+                        <li>
+                            <!-- discuss with designer whether nav menu should be links -->
+                            <h5>Shop</h5>
+                        </li>
+                        <li>
+                            <a href="">Safari</a>
+                        </li>
+                        <li>
+                            <a href="">Ocean</a>
+                        </li>
+                        <li>
+                            <a href="">Dinos</a>
+                        </li>
+                        <li>
+                            <a href="">Sale</a>
+                        </li>
+                    </ul>
+                    <ul class="footerAbout">
+                        <li>
+                            <h5>About</h5>
+                        </li>
+                        <li>
+                            <a href="">About Us</a>
+                        </li>
+                        <li>
+                            <a href="">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="">News</a>
+                        </li>
+                        <li>
+                            <a href="">Legal</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                <ul class="footerTemp">
+                    <li>
+                        <h5>Template</h5>
+                    </li>
+                    <li>
+                        <a href="">Style Guide</a>
+                    </li>
+                    <li>
+                        <a href="">Licenses</a>
+                    </li>
+                    <li>
+                        <a href="">Changelog</a>
+                    </li>
+                </ul>
+            </nav>
+            </div> <!-- .footerNav END -->
+        </div> <!-- .footerFlexContainer END-->
+        </div> <!-- .wrapper END-->
+    </footer>
+    
+</body>
+</html>
