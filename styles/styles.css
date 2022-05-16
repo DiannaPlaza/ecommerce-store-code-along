@@ -791,6 +791,37 @@ footer .footerNav nav a:focus {
   color: white;
 }
 
+/* header.scss */
+.contactHeader {
+  background-color: #f9d3d3;
+  padding-top: 120px;
+}
+.contactHeader .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contactHeader::after {
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/wave.svg);
+  background-color: #f9d3d3;
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+}
+
+/* forms.scss */
 .mapForm .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,7 +918,6 @@ footer .footerNav nav a:focus {
   background-size: 20px;
 }
 
-/* _mediaQueries.scss */
 /* _mediaQueries.scss */
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
@@ -1014,6 +1044,25 @@ footer .footerNav nav a:focus {
     margin: 0 0 50px 0;
   }
 
+  .mapForm .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mapForm .wrapper .mapContainer {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .mapForm .wrapper .formContainer {
+    width: calc(70% - 40px);
+    margin-left: 40px;
+    padding-top: 20px;
+  }
+  .mapForm .wrapper .formContainer .form {
+    max-width: 50%;
+  }
+
   footer .footerFlexContainer {
     margin-bottom: 60px;
   }
@@ -1029,6 +1078,10 @@ footer .footerNav nav a:focus {
   }
   footer .footerNav nav ul {
     margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .mapContainer .map {
     width: 100%;
   }
 }
