@@ -316,6 +316,7 @@ h5 {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   margin: 0 0 24px 0;
+  padding-top: 30px;
 }
 
 p {
@@ -327,6 +328,11 @@ p.smallCopy {
   line-height: 1.2rem;
   font-weight: bold;
   margin: 0;
+}
+p.valueTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 ul, li, a, input {
@@ -489,6 +495,53 @@ img {
   border-radius: 50%;
 }
 
+/* TO DO: implement slide-out menu open/close functionality using JS */
+.slideOutNav {
+  padding: 35px 50px;
+  border-right: 1px solid #d3f0f9;
+  width: 100%;
+  max-width: 506px;
+  height: 100vh;
+  background-color: #084b6d;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -506px;
+  z-index: 20;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+.slideOutNav .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slideOutNav .buttonContainer button {
+  padding: 10px 0 10px 20px;
+}
+.slideOutNav .mainMenu a {
+  font-family: "Young Serif";
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: white;
+}
+.slideOutNav .mainMenu a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slideOutNav .mainMenu a:focus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 header {
   background-color: #e8f9d3;
   margin-bottom: 90px;
@@ -517,39 +570,95 @@ header .headerContent .contentContainer {
   width: 65%;
 }
 
-.productsMainContent section {
-  padding: 75px;
+.shop section {
+  padding: 90px 0;
+  margin: 0;
 }
-.productsMainContent h2 {
+
+.inventory h2 {
   text-align: center;
 }
-.productsMainContent .products {
+.inventory .product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.productsMainContent .products li {
+.inventory .product a {
+  display: block;
+}
+.inventory .product a:hover {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+.inventory .product a:focus {
+  -webkit-transform: rotateZ(2deg) translate(5px);
+          transform: rotateZ(2deg) translate(5px);
+}
+.inventory .product .productImgContainer {
   -ms-flex-preferred-size: calc(33.3333333333% - 30px);
       flex-basis: calc(33.3333333333% - 30px);
   margin: 5px 15px;
   text-align: center;
 }
-.productsMainContent .products img {
+.inventory .product .productImgContainer img {
   border-radius: 10px;
 }
-.productsMainContent .popularProduct {
+.inventory .product .productImgContainer .popularProduct {
   font-weight: bold;
 }
-.productsMainContent .discountedPrice {
-  text-decoration: line-through;
-  color: rgba(8, 75, 109, 0.5);
-}
-.productsMainContent .discountedPrice span {
+.inventory .product .productImgContainer .discountedPrice {
   display: inline-block;
   text-decoration: none;
-  color: #084b6d;
+  text-decoration: line-through;
+  color: rgba(8, 75, 109, 0.5);
+  padding-right: 10px;
+}
+.inventory .product .productImgContainer .price {
+  display: inline-block;
+}
+
+.guarantees {
+  background-color: #f9d3d3;
+  position: relative;
+  text-align: center;
+}
+.guarantees::before {
+  content: "";
+  background-image: url(../assets/wave-3.svg);
+  background-color: #f9d3d3;
+  background-position: top center;
+  background-size: 1500px 60px;
+  background-repeat: repeat-x;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -60px;
+  height: 3rem;
+}
+.guarantees .shopOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.guarantees .guaranteeContainer {
+  width: calc(25% - 40px);
+  margin: 0 20px;
+}
+.guarantees .guaranteeContainer .imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .categoryGallery {
@@ -596,6 +705,47 @@ header .headerContent .contentContainer {
 }
 .categoryGallery .itemFour {
   background-color: #f9d3d3;
+}
+.categoryGallery .items {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.categoryGallery .items a:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.categoryGallery .items a:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.play {
+  background-image: url(../assets/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.play .playContainer {
+  max-width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 70px 45px;
+  border: 24px solid #d3f0f9;
+  background-color: #fff;
 }
 
 footer {
@@ -735,4 +885,150 @@ footer .footerNav nav a:focus {
   background-repeat: no-repeat;
   background-position: 95% center;
   background-size: 20px;
+}
+
+/* _mediaQueries.scss */
+/* _mediaQueries.scss */
+@media (max-width: 1000px) {
+  /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  .guarantees .shopOptions {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .guarantees .guaranteeContainer {
+    width: calc(45% - 40px);
+    margin: 0 20px 40px 20px;
+  }
+
+  footer .footerFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 100px;
+  }
+  footer .footerFlexContainer .logo {
+    margin: 0 0 30px 0;
+  }
+  footer .footerNav {
+    width: 80%;
+  }
+  footer .footerNav nav ul {
+    width: auto;
+  }
+}
+@media (max-width: 800px) {
+  /* all of our styles for TABLET devices will go within this breakpoint */
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .headerImgContainer {
+    min-width: 100%;
+  }
+
+  .headerContent {
+    min-width: 100%;
+  }
+
+  header .headerContent .contentContainer .playContainer {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .productImgContainer {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 500px) {
+  /* all of our styles for MOBILE devices will go within this breakpoint */
+  html {
+    font-size: 100%;
+  }
+
+  .slideOutNav {
+    width: 100%;
+  }
+  .slideOutNav .mainMenu a {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .headerImgContainer {
+    min-width: 100%;
+  }
+
+  .headerContent {
+    min-width: 100%;
+  }
+
+  header .headerContent .contentContainer .playContainer {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .contentContainer h3 {
+    font-size: 2rem;
+  }
+
+  .categoryGallery .items {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 10px 10px;
+  }
+
+  .categoryGallery {
+    margin: 100px 0;
+  }
+
+  .product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .guarantees .shopOptions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .guarantees .guaranteeContainer {
+    width: 85%;
+    margin: 0 0 50px 0;
+  }
+
+  footer .footerFlexContainer {
+    margin-bottom: 60px;
+  }
+  footer .footerNav nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer .footerNav nav ul {
+    margin-bottom: 24px;
+    width: 100%;
+  }
 }

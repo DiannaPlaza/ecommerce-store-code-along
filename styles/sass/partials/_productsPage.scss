@@ -1,46 +1,80 @@
-// productsPage
-.productsMainContent{
-    section{
-        padding: 75px;
+.shop {
+    section {
+        padding: 90px 0;
+        margin: 0;
     }
-    h2{
+}
+.inventory {
+    h2 {
         text-align: center;
-
     }
-
-    .products{
+    .product {
+        // justify-content: flex-start;
         display: flex;
         flex-wrap: wrap;
 
-        // flex-child:
+        a {
+            display: block;
+            &:hover {
+                transform: rotateZ(2deg) translate(5px);
+            }
+            &:focus {
+                transform: rotateZ(2deg) translate(5px);
+            }
+        }
 
-        li {
-             // flex-basis controls the dimensions of the flex-CHILD
-            // because we are using the default flex-direction value (row) the main axis of alignment is the x-axis
-            // Therefore flex-basis will represent the width property:
+        .productImgContainer{
             flex-basis: calc((100%/3) - 30px);
             margin: 5px 15px;
             text-align: center;
+            img{
+                border-radius: 10px;
+            }
+            .popularProduct{
+                font-weight: bold;
+            }
+            .discountedPrice{
+                display: inline-block;
+                text-decoration: none;
+                text-decoration: line-through;
+                color: rgba($color: $primary, $alpha: 0.5);
+                padding-right: 10px;
+            }
+            .price{
+                display: inline-block;
+            }
         }
-
-        img{
-            border-radius: 10px;
-        }
-
     }
-
-    .popularProduct{
-        font-weight: bold;
+}
+.guarantees {
+    background-color: $quaternary;
+    position: relative;
+    text-align: center;
+    &::before {
+        content: '';
+        background-image: url(../assets/wave-3.svg);
+        background-color: $quaternary;
+        background-position: top center;
+        background-size: 1500px 60px;
+        background-repeat: repeat-x;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -60px;
+        height: 3rem;
     }
-    // PLSFIXTHIS: is there a more elegant solution to unapplying the CSS to the nested span
-    .discountedPrice{
-        text-decoration: line-through;
-        color: rgba($color: $primary, $alpha: 0.5);
+    .shopOptions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .guaranteeContainer {
+        width: calc(25% - 40px);
+        margin: 0 20px;
 
-        span{
-            display: inline-block;
-            text-decoration: none;
-            color: rgba($color: $primary, $alpha: 1)
+        .imgContainer{
+            display: flex;
+            justify-content: center;
         }
     }
 }

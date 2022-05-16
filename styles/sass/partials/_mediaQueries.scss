@@ -1,0 +1,222 @@
+// @media (max-width: 480px) {
+
+
+//     html {
+//         font-size: 100%;
+//     }
+
+
+//     header {
+//         flex-direction: column;
+//     }
+
+//     .headerImgContainer{
+//         min-width: 100%;
+//     }
+
+//     .headerContent {
+//         min-width: 100%;
+//     }
+
+//     header .headerContent .contentContainer {
+//         width: 90%;
+//         padding: 50px 0;
+//     }
+
+//     .contentContainer h3 {
+//         font-size: 2rem;
+//     }
+
+
+//     .categoryGallery .items {
+//         width: 100%;
+//         padding: 20px;
+//         margin: 10px 10px 10px;
+//     }
+
+//     .categoryGallery {
+//         margin: 100px 0;
+//     }
+
+//     footer .footerFlexContainer {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     footer .footerNav nav {
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+
+//         a {
+//             line-height: 1.7rem;
+//         }
+//     }
+
+//     footer .footerNav nav ul {
+//         padding: 20px 0;
+//         width: auto;
+
+//         h5 {
+//             margin: 0 0 10px 0;
+//         }
+
+//         li {
+
+//         }
+//     }
+
+//     footer .footerNav nav a {
+//         font-size: 1rem;
+//     }
+// }
+/* _mediaQueries.scss */
+
+/* _mediaQueries.scss */
+
+@media (max-width: 1000px) {
+
+    /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+    .guarantees {
+        .shopOptions {
+            justify-content: space-between;
+        }
+        .guaranteeContainer {
+            width: calc(45% - 40px);
+            margin: 0 20px 40px 20px;
+        }
+    }
+    footer {
+        .footerFlexContainer {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+
+            .logo {
+                margin: 0 0 30px 0;
+            }
+        }
+
+        .footerNav {
+            width: 80%;
+
+            nav {
+                ul {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    /* all of our styles for TABLET devices will go within this breakpoint */
+    header {
+        flex-direction: column;
+
+        .headerImgContainer{
+            min-width: 100%;
+        }
+    
+    }
+
+    .headerContent {
+        min-width: 100%;
+    }
+
+    header .headerContent .contentContainer .playContainer{
+        width: 90%;
+        padding: 50px 0;
+    }
+    .productImgContainer{
+        width: calc((100%/2) - 30px);
+    }
+}
+
+@media (max-width: 500px) {
+    /* all of our styles for MOBILE devices will go within this breakpoint */
+    html {
+        font-size: 100%;
+    }
+
+    .slideOutNav {
+        width: 100%;
+
+        .mainMenu {
+            a {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+
+    header {
+        flex-direction: column;
+
+        .headerImgContainer{
+            min-width: 100%;
+        }
+    
+    }
+
+    .headerContent {
+        min-width: 100%;
+    }
+
+    header .headerContent .contentContainer .playContainer{
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .contentContainer h3{
+        font-size: 2rem;
+    }
+
+
+    .categoryGallery .items {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 10px 10px;
+    }
+
+    .categoryGallery {
+        margin: 100px 0;
+    }
+
+    .product{
+        flex-direction: column;
+    }
+
+
+    .guarantees {
+        .shopOptions {
+            flex-direction: column;
+            align-items: center;
+        }
+        .guaranteeContainer {
+            width: 85%;
+            margin: 0 0 50px 0;
+        }
+    }
+
+    footer {
+        .footerFlexContainer {
+            margin-bottom: 60px;
+        }
+
+        .footerNav {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                ul {
+                    margin-bottom: 24px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
